@@ -9,11 +9,11 @@ namespace Domain.Modelos
 {
     public class Jogador
     {
-        public int Id {  get; set; }
+        public int JogadorId {  get; set; }
         public string Nome { get; set; }
         public int Idade { get; set; }
-        public PernaBoa PernaBoa { get; set; }
-        public Posicao Posicao { get; set; }
+        public PernaBoaEnum PernaBoa { get; set; }
+        public PosicaoEnum Posicao { get; set; }
         public string Nacionalidade { get; set; }
         public string? Foto { get; set; }
         public int TimeId { get; set; }

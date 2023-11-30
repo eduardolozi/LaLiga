@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Enums
 {
-    public enum Posicao
+    public enum PosicaoEnum
     {
         Goleiro,
         LateralDireito,

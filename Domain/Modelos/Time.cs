@@ -8,13 +8,13 @@ namespace Domain.Modelos
 {
     public class Time
     {
-        public int Id { get; set; }
+        public int TimeId { get; set; }
         public string Nome { get; set; }
         public DateTime AnoFundacao { get; set; }
-        public string NomeEstadio { get; set; }
         public string? FotoEscudo { get; set; }
-        public string? FotoEstadio { get; set; }
         public List<int> JogadoresId { get; set; }
+        public int EstadioId { get; set; }
         public List<Jogador> Jogadores { get; set; }
+        public Estadio Estadio { get; set; }
     }
 }
