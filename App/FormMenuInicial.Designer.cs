@@ -1,6 +1,6 @@
 ﻿namespace App
 {
-    partial class Form1
+    partial class FormMenuInicial
     {
         /// <summary>
         ///  Required designer variable.
@@ -159,6 +159,7 @@
             botaoVerTimes.TabIndex = 6;
             botaoVerTimes.Text = "Veja os times";
             botaoVerTimes.UseVisualStyleBackColor = false;
+            botaoVerTimes.Click += AoClicarBotaoVerTimes;
             // 
             // panel6
             // 
@@ -208,6 +209,7 @@
             botaoPersonalizarTimes.TabIndex = 6;
             botaoPersonalizarTimes.Text = "Personalizar";
             botaoPersonalizarTimes.UseVisualStyleBackColor = true;
+            botaoPersonalizarTimes.Click += AoClicarBotaoPersonalizarTimes;
             // 
             // panel8
             // 
@@ -256,6 +258,7 @@
             botaoVerJogadores.TabIndex = 6;
             botaoVerJogadores.Text = "Veja os jogadores";
             botaoVerJogadores.UseVisualStyleBackColor = true;
+            botaoVerJogadores.Click += AoClicarBotaoVerJogadores;
             // 
             // panel10
             // 
@@ -328,8 +331,9 @@
             botaoPersonalizarJogadores.TabIndex = 0;
             botaoPersonalizarJogadores.Text = "Personalize";
             botaoPersonalizarJogadores.UseVisualStyleBackColor = true;
+            botaoPersonalizarJogadores.Click += AoClicarBotaoPersonalizarJogadores;
             // 
-            // Form1
+            // FormMenuInicial
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -344,9 +348,10 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             MaximumSize = new Size(1200, 860);
-            Name = "Form1";
+            Name = "FormMenuInicial";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += Form1_Load;
+            Load += AoCarregarFormMenuInicial;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
