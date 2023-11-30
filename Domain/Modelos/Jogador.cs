@@ -15,6 +15,7 @@ namespace Domain.Modelos
         public PernaBoaEnum PernaBoa { get; set; }
         public PosicaoEnum Posicao { get; set; }
         public string Nacionalidade { get; set; }
+        public int NumeroCamisa { get; set; }
         public string? Foto { get; set; }
         public int TimeId { get; set; }
         public Time Time { get; set; }

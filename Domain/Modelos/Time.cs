@@ -12,8 +12,6 @@ namespace Domain.Modelos
         public string Nome { get; set; }
         public DateTime AnoFundacao { get; set; }
         public string? FotoEscudo { get; set; }
-        public List<int> JogadoresId { get; set; }
-        public int EstadioId { get; set; }
         public List<Jogador> Jogadores { get; set; }
         public Estadio Estadio { get; set; }
     }
