@@ -343,6 +343,7 @@
             Controls.Add(panel4);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            MaximumSize = new Size(1200, 860);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
