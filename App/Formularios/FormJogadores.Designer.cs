@@ -63,6 +63,7 @@
             botaoCadastrar.TabIndex = 2;
             botaoCadastrar.Text = "Cadastrar";
             botaoCadastrar.UseVisualStyleBackColor = true;
+            botaoCadastrar.Click += aoClicarNoBotaoAdicionar;
             // 
             // botaoEditar
             // 
@@ -82,7 +83,7 @@
             botaoRemover.Text = "Remover";
             botaoRemover.UseVisualStyleBackColor = true;
             // 
-            // formularioJogadores
+            // FormJogadores
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -93,7 +94,7 @@
             Controls.Add(gridJogadores);
             Controls.Add(comboBoxTimes);
             MaximumSize = new Size(1200, 750);
-            Name = "formularioJogadores";
+            Name = "FormJogadores";
             Text = "Visualizar Jogadores";
             ((System.ComponentModel.ISupportInitialize)gridJogadores).EndInit();
             ResumeLayout(false);

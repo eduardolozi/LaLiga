@@ -16,5 +16,11 @@ namespace App.Formularios
         {
             InitializeComponent();
         }
+
+        private void aoClicarNoBotaoAdicionar(object sender, EventArgs e)
+        {
+            var formCadastroJogadores = new FormCadastroJogadores();
+            formCadastroJogadores.ShowDialog();
+        }
     }
 }

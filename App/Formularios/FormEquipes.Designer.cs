@@ -61,6 +61,7 @@
             botaoAdcionar.TabIndex = 5;
             botaoAdcionar.Text = "Adicionar";
             botaoAdcionar.UseVisualStyleBackColor = true;
+            botaoAdcionar.Click += aoClicarNoBotaoAdicionar;
             // 
             // gridTimes
             // 
@@ -72,7 +73,7 @@
             gridTimes.Size = new Size(1158, 580);
             gridTimes.TabIndex = 4;
             // 
-            // formularioEquipes
+            // FormEquipes
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -82,7 +83,7 @@
             Controls.Add(botaoAdcionar);
             Controls.Add(gridTimes);
             MaximumSize = new Size(1200, 750);
-            Name = "formularioEquipes";
+            Name = "FormEquipes";
             Text = "FormularioEquipes";
             ((System.ComponentModel.ISupportInitialize)gridTimes).EndInit();
             ResumeLayout(false);
