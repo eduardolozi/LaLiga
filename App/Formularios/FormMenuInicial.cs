@@ -1,3 +1,5 @@
+using App.Formularios;
+
 namespace App
 {
     public partial class FormMenuInicial : Form
@@ -7,29 +9,28 @@ namespace App
             InitializeComponent();
         }
 
-        private void AoCarregarFormMenuInicial(object sender, EventArgs e)
-        {
-
-        }
-
         private void AoClicarBotaoPersonalizarTimes(object sender, EventArgs e)
         {
-
+            var formTimes = new FormEquipes();
+            formTimes.ShowDialog();
         }
 
         private void AoClicarBotaoVerTimes(object sender, EventArgs e)
         {
-
+            var formTimes = new FormEquipes();
+            formTimes.ShowDialog();
         }
 
         private void AoClicarBotaoVerJogadores(object sender, EventArgs e)
         {
-
+            var formJogadores = new FormJogadores();
+            formJogadores.ShowDialog();
         }
 
         private void AoClicarBotaoPersonalizarJogadores(object sender, EventArgs e)
         {
-
+            var formJogadores = new FormJogadores();
+            formJogadores.ShowDialog();
         }
     }
 }

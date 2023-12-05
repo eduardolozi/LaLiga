@@ -351,7 +351,6 @@
             Name = "FormMenuInicial";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += AoCarregarFormMenuInicial;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
