@@ -44,6 +44,7 @@
             label6 = new Label();
             label7 = new Label();
             botaoSalvarCadastroJogadores = new Button();
+            botaoCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)campoFotoJogador).BeginInit();
             SuspendLayout();
             // 
@@ -176,18 +177,28 @@
             // 
             // botaoSalvarCadastroJogadores
             // 
-            botaoSalvarCadastroJogadores.Location = new Point(399, 479);
+            botaoSalvarCadastroJogadores.Location = new Point(257, 480);
             botaoSalvarCadastroJogadores.Name = "botaoSalvarCadastroJogadores";
             botaoSalvarCadastroJogadores.Size = new Size(119, 34);
             botaoSalvarCadastroJogadores.TabIndex = 16;
             botaoSalvarCadastroJogadores.Text = "Salvar";
             botaoSalvarCadastroJogadores.UseVisualStyleBackColor = true;
             // 
+            // botaoCancelar
+            // 
+            botaoCancelar.Location = new Point(399, 480);
+            botaoCancelar.Name = "botaoCancelar";
+            botaoCancelar.Size = new Size(119, 34);
+            botaoCancelar.TabIndex = 17;
+            botaoCancelar.Text = "Cancelar";
+            botaoCancelar.UseVisualStyleBackColor = true;
+            // 
             // FormCadastroJogadores
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(530, 528);
+            Controls.Add(botaoCancelar);
             Controls.Add(botaoSalvarCadastroJogadores);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -231,5 +242,6 @@
         private Label label6;
         private Label label7;
         private Button botaoSalvarCadastroJogadores;
+        private Button botaoCancelar;
     }
 }

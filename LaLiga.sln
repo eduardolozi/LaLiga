@@ -4,8 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App", "App\App.csproj", "{1C4EBAF2-23B6-432A-B4EB-1AC0A93474DE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{638C7556-9F86-48DD-848F-0A9158AD86F0} = {638C7556-9F86-48DD-848F-0A9158AD86F0}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{638C7556-9F86-48DD-848F-0A9158AD86F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{638C7556-9F86-48DD-848F-0A9158AD86F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

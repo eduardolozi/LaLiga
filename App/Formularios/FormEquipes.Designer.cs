@@ -32,6 +32,13 @@
             botaoEditar = new Button();
             botaoAdcionar = new Button();
             gridTimes = new DataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            Nome = new DataGridViewTextBoxColumn();
+            DataFundacao = new DataGridViewTextBoxColumn();
+            NomeEstadio = new DataGridViewTextBoxColumn();
+            CapacidadeEstadio = new DataGridViewTextBoxColumn();
+            FotoEstadio = new DataGridViewTextBoxColumn();
+            FotoEmblema = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)gridTimes).BeginInit();
             SuspendLayout();
             // 
@@ -65,13 +72,65 @@
             // 
             // gridTimes
             // 
+            gridTimes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             gridTimes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gridTimes.Columns.AddRange(new DataGridViewColumn[] { Id, Nome, DataFundacao, NomeEstadio, CapacidadeEstadio, FotoEstadio, FotoEmblema });
             gridTimes.Location = new Point(12, 33);
             gridTimes.Name = "gridTimes";
+            gridTimes.ReadOnly = true;
             gridTimes.RowHeadersWidth = 51;
             gridTimes.RowTemplate.Height = 29;
             gridTimes.Size = new Size(1158, 580);
             gridTimes.TabIndex = 4;
+            // 
+            // Id
+            // 
+            Id.HeaderText = "Id";
+            Id.MinimumWidth = 6;
+            Id.Name = "Id";
+            Id.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            Nome.HeaderText = "Nome";
+            Nome.MinimumWidth = 6;
+            Nome.Name = "Nome";
+            Nome.ReadOnly = true;
+            // 
+            // DataFundacao
+            // 
+            DataFundacao.HeaderText = "Data de Fundação";
+            DataFundacao.MinimumWidth = 6;
+            DataFundacao.Name = "DataFundacao";
+            DataFundacao.ReadOnly = true;
+            // 
+            // NomeEstadio
+            // 
+            NomeEstadio.HeaderText = "Estádio";
+            NomeEstadio.MinimumWidth = 6;
+            NomeEstadio.Name = "NomeEstadio";
+            NomeEstadio.ReadOnly = true;
+            // 
+            // CapacidadeEstadio
+            // 
+            CapacidadeEstadio.HeaderText = "Capacidade do Estádio";
+            CapacidadeEstadio.MinimumWidth = 6;
+            CapacidadeEstadio.Name = "CapacidadeEstadio";
+            CapacidadeEstadio.ReadOnly = true;
+            // 
+            // FotoEstadio
+            // 
+            FotoEstadio.HeaderText = "Foto do Estádio";
+            FotoEstadio.MinimumWidth = 6;
+            FotoEstadio.Name = "FotoEstadio";
+            FotoEstadio.ReadOnly = true;
+            // 
+            // FotoEmblema
+            // 
+            FotoEmblema.HeaderText = "Foto do Emblema";
+            FotoEmblema.MinimumWidth = 6;
+            FotoEmblema.Name = "FotoEmblema";
+            FotoEmblema.ReadOnly = true;
             // 
             // FormEquipes
             // 
@@ -95,5 +154,12 @@
         private Button botaoEditar;
         private Button botaoAdcionar;
         private DataGridView gridTimes;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Nome;
+        private DataGridViewTextBoxColumn DataFundacao;
+        private DataGridViewTextBoxColumn NomeEstadio;
+        private DataGridViewTextBoxColumn CapacidadeEstadio;
+        private DataGridViewTextBoxColumn FotoEstadio;
+        private DataGridViewTextBoxColumn FotoEmblema;
     }
 }

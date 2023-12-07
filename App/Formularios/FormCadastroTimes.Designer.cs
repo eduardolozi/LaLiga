@@ -43,6 +43,7 @@
             botaoSalvarCadastroTime = new Button();
             label6 = new Label();
             campoCapacidade = new TextBox();
+            botaoCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)campoFotoEstadio).BeginInit();
             ((System.ComponentModel.ISupportInitialize)campoFotoEmblema).BeginInit();
             SuspendLayout();
@@ -74,6 +75,7 @@
             // 
             // campoDataFundacao
             // 
+            campoDataFundacao.Format = DateTimePickerFormat.Short;
             campoDataFundacao.Location = new Point(279, 45);
             campoDataFundacao.Name = "campoDataFundacao";
             campoDataFundacao.Size = new Size(202, 27);
@@ -93,6 +95,7 @@
             campoFotoEstadio.Location = new Point(12, 244);
             campoFotoEstadio.Name = "campoFotoEstadio";
             campoFotoEstadio.Size = new Size(198, 182);
+            campoFotoEstadio.SizeMode = PictureBoxSizeMode.StretchImage;
             campoFotoEstadio.TabIndex = 6;
             campoFotoEstadio.TabStop = false;
             // 
@@ -113,6 +116,7 @@
             botaoBuscarImagemEstadio.TabIndex = 8;
             botaoBuscarImagemEstadio.Text = "Buscar";
             botaoBuscarImagemEstadio.UseVisualStyleBackColor = true;
+            botaoBuscarImagemEstadio.Click += AoClicarBotaoBuscarImagemEstadio;
             // 
             // campoNomeEstadio
             // 
@@ -128,6 +132,7 @@
             campoFotoEmblema.Location = new Point(279, 244);
             campoFotoEmblema.Name = "campoFotoEmblema";
             campoFotoEmblema.Size = new Size(202, 182);
+            campoFotoEmblema.SizeMode = PictureBoxSizeMode.StretchImage;
             campoFotoEmblema.TabIndex = 10;
             campoFotoEmblema.TabStop = false;
             // 
@@ -148,15 +153,17 @@
             botaoBuscarImagemEmblema.TabIndex = 12;
             botaoBuscarImagemEmblema.Text = "Buscar";
             botaoBuscarImagemEmblema.UseVisualStyleBackColor = true;
+            botaoBuscarImagemEmblema.Click += AoClicarBotaoBuscarImagemEmblema;
             // 
             // botaoSalvarCadastroTime
             // 
-            botaoSalvarCadastroTime.Location = new Point(387, 512);
+            botaoSalvarCadastroTime.Location = new Point(279, 512);
             botaoSalvarCadastroTime.Name = "botaoSalvarCadastroTime";
             botaoSalvarCadastroTime.Size = new Size(94, 29);
             botaoSalvarCadastroTime.TabIndex = 13;
             botaoSalvarCadastroTime.Text = "Salvar";
             botaoSalvarCadastroTime.UseVisualStyleBackColor = true;
+            botaoSalvarCadastroTime.Click += AoClicarBotaoSalvar;
             // 
             // label6
             // 
@@ -174,11 +181,22 @@
             campoCapacidade.Size = new Size(198, 27);
             campoCapacidade.TabIndex = 15;
             // 
+            // botaoCancelar
+            // 
+            botaoCancelar.Location = new Point(387, 512);
+            botaoCancelar.Name = "botaoCancelar";
+            botaoCancelar.Size = new Size(94, 29);
+            botaoCancelar.TabIndex = 16;
+            botaoCancelar.Text = "Cancelar";
+            botaoCancelar.UseVisualStyleBackColor = true;
+            botaoCancelar.Click += AoClicarBotaoCancelar;
+            // 
             // FormCadastroTimes
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(496, 553);
+            Controls.Add(botaoCancelar);
             Controls.Add(campoCapacidade);
             Controls.Add(label6);
             Controls.Add(botaoSalvarCadastroTime);
@@ -197,6 +215,7 @@
             MaximumSize = new Size(514, 600);
             Name = "FormCadastroTimes";
             Text = "Cadastro de Times";
+            Load += AoCarregarFormulario;
             ((System.ComponentModel.ISupportInitialize)campoFotoEstadio).EndInit();
             ((System.ComponentModel.ISupportInitialize)campoFotoEmblema).EndInit();
             ResumeLayout(false);
@@ -220,5 +239,6 @@
         private Button botaoSalvarCadastroTime;
         private Label label6;
         private TextBox campoCapacidade;
+        private Button botaoCancelar;
     }
 }
