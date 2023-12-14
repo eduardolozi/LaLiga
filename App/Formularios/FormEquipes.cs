@@ -13,7 +13,7 @@ namespace App.Formularios
 {
     public partial class FormEquipes : Form
     {
-        private List<Time> times = new();
+        //private List<Time> times = new();
         public FormEquipes()
         {
             InitializeComponent();
@@ -21,8 +21,8 @@ namespace App.Formularios
 
         private void AoAtualizarGrid(List<Time> times)
         {
-            gridTimes.DataSource = null;
-            gridTimes.DataSource = times;
+            //gridTimes.DataSource = null;
+            //gridTimes.DataSource = times;
         }
 
         private void botaoEditar_Click(object sender, EventArgs e)
@@ -35,14 +35,14 @@ namespace App.Formularios
 
         private void aoClicarNoBotaoAdicionar(object sender, EventArgs e)
         {
-            var formCadastroTimes = new FormCadastroTimes();
-            formCadastroTimes.ShowDialog();
+            //var formCadastroTimes = new FormCadastroTimes();
+            //formCadastroTimes.ShowDialog();
 
-            if (formCadastroTimes.DialogResult is DialogResult.OK)
-            {
-                times.Add(formCadastroTimes.time);
-                AoAtualizarGrid(times);
-            }
+            //if (formCadastroTimes.DialogResult is DialogResult.OK)
+            //{
+            //    times.Add(formCadastroTimes.time);
+            //    AoAtualizarGrid(times);
+            //}
 
         }
     }

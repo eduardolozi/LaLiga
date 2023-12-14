@@ -12,11 +12,11 @@ namespace Infra.Repositorios
     {
         public List<Estadio> ObterTodos()
         {
-
+            return null;
         }
         public Estadio ObterPorId(int id)
         {
-
+            return null;
         }
         public void Adicionar(Estadio estadio)
         {

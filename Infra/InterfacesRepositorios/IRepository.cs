@@ -15,4 +15,4 @@ namespace Infra.InterfacesRepositorios
         void Atualizar(T entidade);
     }
 }
-}
+

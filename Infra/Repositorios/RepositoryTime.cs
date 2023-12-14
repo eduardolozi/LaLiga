@@ -12,11 +12,11 @@ namespace Infra.Repositorios
     {
         public List<Time> ObterTodos()
         {
-            
+            return null;
         }
         public Time ObterPorId(int id)
         {
-
+            return null;
         }
         public void Adicionar(Time entidade)
         {

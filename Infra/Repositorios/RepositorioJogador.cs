@@ -12,11 +12,11 @@ namespace Infra.Repositorios
     {
         public List<Jogador> ObterTodos()
         {
-
+            return null;
         }
         public Jogador ObterPorId(int id)
         {
-
+            return null;
         }
         public void Adicionar(Jogador jogador)
         {
