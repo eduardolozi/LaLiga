@@ -13,7 +13,7 @@ namespace App.Formularios
 {
     public partial class FormEquipes : Form
     {
-        private List<Time> times;
+        private List<Time> times = new();
         public FormEquipes()
         {
             InitializeComponent();
@@ -38,7 +38,7 @@ namespace App.Formularios
             var formCadastroTimes = new FormCadastroTimes();
             formCadastroTimes.ShowDialog();
 
-            if(formCadastroTimes.DialogResult is DialogResult.OK)
+            if (formCadastroTimes.DialogResult is DialogResult.OK)
             {
                 times.Add(formCadastroTimes.time);
                 AoAtualizarGrid(times);

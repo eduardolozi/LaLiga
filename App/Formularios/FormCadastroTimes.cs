@@ -16,7 +16,9 @@ namespace App.Formularios
     public partial class FormCadastroTimes : Form
     {
         public Time time = new();
-        
+        private Estadio estadio = new();
+
+
         public FormCadastroTimes()
         {
             InitializeComponent();
@@ -65,7 +67,6 @@ namespace App.Formularios
         private void AoClicarBotaoSalvar(object sender, EventArgs e)
         {
             time.Nome = campoNome.Text;
-            Estadio estadio = new();
             estadio.Nome = Enum.Parse<EstadioEnum>(campoNomeEstadio.Text);
             estadio.Capacidade = int.Parse(campoCapacidade.Text);
             time.Estadio = estadio;

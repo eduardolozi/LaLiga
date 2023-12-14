@@ -28,18 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             botaoRemover = new Button();
             botaoEditar = new Button();
             botaoAdcionar = new Button();
             gridTimes = new DataGridView();
-            Id = new DataGridViewTextBoxColumn();
-            Nome = new DataGridViewTextBoxColumn();
-            DataFundacao = new DataGridViewTextBoxColumn();
             NomeEstadio = new DataGridViewTextBoxColumn();
-            CapacidadeEstadio = new DataGridViewTextBoxColumn();
-            FotoEstadio = new DataGridViewTextBoxColumn();
-            FotoEmblema = new DataGridViewTextBoxColumn();
+            estadioBindingSource = new BindingSource(components);
+            estadioBindingSource1 = new BindingSource(components);
+            timeBindingSource = new BindingSource(components);
+            timeIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nomeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            estadioBindingSource2 = new BindingSource(components);
+            estadioBindingSource3 = new BindingSource(components);
+            jogadoresBindingSource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)gridTimes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)estadioBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)estadioBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)timeBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)estadioBindingSource2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)estadioBindingSource3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)jogadoresBindingSource).BeginInit();
             SuspendLayout();
             // 
             // botaoRemover
@@ -72,9 +81,11 @@
             // 
             // gridTimes
             // 
+            gridTimes.AutoGenerateColumns = false;
             gridTimes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             gridTimes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            gridTimes.Columns.AddRange(new DataGridViewColumn[] { Id, Nome, DataFundacao, NomeEstadio, CapacidadeEstadio, FotoEstadio, FotoEmblema });
+            gridTimes.Columns.AddRange(new DataGridViewColumn[] { NomeEstadio, timeIdDataGridViewTextBoxColumn, nomeDataGridViewTextBoxColumn });
+            gridTimes.DataSource = timeBindingSource;
             gridTimes.Location = new Point(12, 33);
             gridTimes.Name = "gridTimes";
             gridTimes.ReadOnly = true;
@@ -83,54 +94,54 @@
             gridTimes.Size = new Size(1158, 580);
             gridTimes.TabIndex = 4;
             // 
-            // Id
-            // 
-            Id.HeaderText = "Id";
-            Id.MinimumWidth = 6;
-            Id.Name = "Id";
-            Id.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            Nome.HeaderText = "Nome";
-            Nome.MinimumWidth = 6;
-            Nome.Name = "Nome";
-            Nome.ReadOnly = true;
-            // 
-            // DataFundacao
-            // 
-            DataFundacao.HeaderText = "Data de Fundação";
-            DataFundacao.MinimumWidth = 6;
-            DataFundacao.Name = "DataFundacao";
-            DataFundacao.ReadOnly = true;
-            // 
             // NomeEstadio
             // 
-            NomeEstadio.HeaderText = "Estádio";
+            NomeEstadio.DataPropertyName = "Domain.Modelos.Estadio";
+            NomeEstadio.HeaderText = "Nome do Estádio";
             NomeEstadio.MinimumWidth = 6;
             NomeEstadio.Name = "NomeEstadio";
             NomeEstadio.ReadOnly = true;
             // 
-            // CapacidadeEstadio
+            // estadioBindingSource
             // 
-            CapacidadeEstadio.HeaderText = "Capacidade do Estádio";
-            CapacidadeEstadio.MinimumWidth = 6;
-            CapacidadeEstadio.Name = "CapacidadeEstadio";
-            CapacidadeEstadio.ReadOnly = true;
+            estadioBindingSource.DataSource = typeof(Domain.Modelos.Estadio);
             // 
-            // FotoEstadio
+            // estadioBindingSource1
             // 
-            FotoEstadio.HeaderText = "Foto do Estádio";
-            FotoEstadio.MinimumWidth = 6;
-            FotoEstadio.Name = "FotoEstadio";
-            FotoEstadio.ReadOnly = true;
+            estadioBindingSource1.DataSource = typeof(Domain.Modelos.Estadio);
             // 
-            // FotoEmblema
+            // timeBindingSource
             // 
-            FotoEmblema.HeaderText = "Foto do Emblema";
-            FotoEmblema.MinimumWidth = 6;
-            FotoEmblema.Name = "FotoEmblema";
-            FotoEmblema.ReadOnly = true;
+            timeBindingSource.DataSource = typeof(Domain.Modelos.Time);
+            // 
+            // timeIdDataGridViewTextBoxColumn
+            // 
+            timeIdDataGridViewTextBoxColumn.DataPropertyName = "TimeId";
+            timeIdDataGridViewTextBoxColumn.HeaderText = "TimeId";
+            timeIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            timeIdDataGridViewTextBoxColumn.Name = "timeIdDataGridViewTextBoxColumn";
+            timeIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            nomeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // estadioBindingSource2
+            // 
+            estadioBindingSource2.DataSource = typeof(Domain.Modelos.Estadio);
+            // 
+            // estadioBindingSource3
+            // 
+            estadioBindingSource3.DataSource = typeof(Domain.Modelos.Estadio);
+            // 
+            // jogadoresBindingSource
+            // 
+            jogadoresBindingSource.DataMember = "Jogadores";
+            jogadoresBindingSource.DataSource = timeBindingSource;
             // 
             // FormEquipes
             // 
@@ -145,6 +156,12 @@
             Name = "FormEquipes";
             Text = "FormularioEquipes";
             ((System.ComponentModel.ISupportInitialize)gridTimes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)estadioBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)estadioBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)timeBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)estadioBindingSource2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)estadioBindingSource3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)jogadoresBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -154,12 +171,14 @@
         private Button botaoEditar;
         private Button botaoAdcionar;
         private DataGridView gridTimes;
-        private DataGridViewTextBoxColumn Id;
-        private DataGridViewTextBoxColumn Nome;
-        private DataGridViewTextBoxColumn DataFundacao;
         private DataGridViewTextBoxColumn NomeEstadio;
-        private DataGridViewTextBoxColumn CapacidadeEstadio;
-        private DataGridViewTextBoxColumn FotoEstadio;
-        private DataGridViewTextBoxColumn FotoEmblema;
+        private DataGridViewTextBoxColumn timeIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private BindingSource timeBindingSource;
+        private BindingSource estadioBindingSource;
+        private BindingSource estadioBindingSource1;
+        private BindingSource estadioBindingSource2;
+        private BindingSource estadioBindingSource3;
+        private BindingSource jogadoresBindingSource;
     }
 }
