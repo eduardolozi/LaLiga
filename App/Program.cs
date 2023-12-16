@@ -1,15 +1,26 @@
+using Domain.Modelos;
+using Infra.Banco.Migracao;
+using Infra.Repositorios;
+
 namespace App
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            try
+            {
+                ConfiguracaoDaMigracao.CriaMigracao();
+            } catch (Exception)
+            {
+                Console.WriteLine("Erro ao fazer a migracao com o banco de dados.");
+            }
+
+            var repo = new RepositorioEstadio();
+            var estadio = new Estadio();
+            repo.Remover(estadio);
+
             ApplicationConfiguration.Initialize();
             Application.Run(new FormMenuInicial());
         }

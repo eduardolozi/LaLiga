@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LinqToDB.Mapping;
 
 namespace Domain.Enums
 {
     public enum PernaBoaEnum
     {
+        [MapValue("Direita")]
         Direita,
+        [MapValue("Esquerda")]
         Esquerda
     }
 }
