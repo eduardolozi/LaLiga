@@ -14,7 +14,7 @@ namespace Domain.Modelos
 
         [Column("Nome"), NotNull] public EstadioEnum Nome { get; set; }
 
-        [Column("FotoEstadio"), Nullable] public string? FotoEstadio { get; set; }
+        [Column("Foto"), Nullable] public string? FotoEstadio { get; set; }
 
         [Column("Capacidade"), NotNull] public int Capacidade { get; set; }
     }

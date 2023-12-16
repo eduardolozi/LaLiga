@@ -1,4 +1,6 @@
+using Domain.Modelos;
 using Infra.Banco.Migracao;
+using Infra.Repositorios;
 
 namespace App
 {
@@ -14,6 +16,10 @@ namespace App
             {
                 Console.WriteLine("Erro ao fazer a migracao com o banco de dados.");
             }
+
+            var repo = new RepositorioEstadio();
+            var estadio = new Estadio();
+            repo.Remover(estadio);
 
             ApplicationConfiguration.Initialize();
             Application.Run(new FormMenuInicial());
